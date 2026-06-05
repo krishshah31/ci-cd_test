@@ -1,5 +1,5 @@
 # Build output — ignore everything in Debug by default...
-/Debug/*
+/Debug/**
 
 # ...but keep the generated makefiles so CI can build from a clean checkout
 !/Debug/makefile
@@ -10,10 +10,6 @@
 # Keep the subfolder makefiles (CubeIDE puts sub-makefiles in Core/ and Drivers/)
 !/Debug/Core/
 !/Debug/Drivers/
-/Debug/Core/**
-/Debug/Drivers/**
-!/Debug/Core/**/
-!/Debug/Drivers/**/
 !/Debug/Core/**/*.mk
 !/Debug/Drivers/**/*.mk
 !/Debug/Core/**/subdir.mk
