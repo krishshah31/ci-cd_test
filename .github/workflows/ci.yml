@@ -5,6 +5,9 @@ on: [push]
 jobs:
   build-flash-test:
     runs-on: [self-hosted, windows, x64]
+    permissions:
+      checks: write
+      contents: read
 
     steps:
       - name: Checkout code
