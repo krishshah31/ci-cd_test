@@ -1,0 +1,28 @@
+name: STM32 HIL CI
+
+on: [push]
+
+jobs:
+  build-flash-test:
+    runs-on: [self-hosted, windows, x64]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build firmware
+        run: .\ci_tools\build.bat
+
+      - name: Flash to board
+        run: .\ci_tools\flash.bat
+
+      - name: Run HIL tests
+        run: ..\.venv\Scripts\python.exe -m pytest ci_tools -v --junitxml=results.xml
+
+      - name: Publish test results
+        if: always()
+        uses: dorny/test-reporter@v1
+        with:
+          name: HIL Test Report
+          path: results.xml
+          reporter: java-junit
