@@ -1,0 +1,12 @@
+# Build output (generated)
+/Debug/
+/Release/
+
+# Python
+/.venv/
+__pycache__/
+*.pyc
+
+# pytest / CI artifacts
+.pytest_cache/
+results.xml
