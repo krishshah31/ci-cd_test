@@ -17,7 +17,7 @@ jobs:
         run: .\ci_tools\flash.bat
 
       - name: Run HIL tests
-        run: ..\.venv\Scripts\python.exe -m pytest ci_tools -v --junitxml=results.xml
+        run: D:\ci-venv\Scripts\python.exe -m pytest ci_tools -v --junitxml=results.xml
 
       - name: Publish test results
         if: always()
