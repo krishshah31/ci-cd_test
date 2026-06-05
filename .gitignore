@@ -31,3 +31,4 @@ __pycache__/
 *.list
 *.map
 results.xml
+/Debug/
