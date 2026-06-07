@@ -13,5 +13,10 @@ def dut():
 def send_command(s, cmd):
     s.reset_input_buffer()
     s.write((cmd + "\r\n").encode())
-    time.sleep(0.3)
-    return s.read(200).decode(errors="ignore")
+    buf = ""
+    deadline = time.time() + 2
+    while time.time() < deadline:
+        buf += s.read(64).decode(errors="ignore")
+        if "> " in buf and len(buf) > len(cmd) + 4:
+            break
+    return buf
