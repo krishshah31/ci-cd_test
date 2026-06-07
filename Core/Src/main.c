@@ -18,9 +18,8 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "version.h"
 #include <string.h>
-
+#include "version.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -114,13 +113,12 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Infinite loop */
-
-	  /* USER CODE BEGIN WHILE */
+  /* USER CODE BEGIN WHILE */
 	    while (1)
 	    {
-	      /* USER CODE END WHILE */
+    /* USER CODE END WHILE */
 
-	      /* USER CODE BEGIN 3 */
+    /* USER CODE BEGIN 3 */
 	      uart_print("\r\n> ");
 	      uart_read_line(rx_line, sizeof(rx_line));
 
@@ -136,8 +134,8 @@ int main(void)
 	          uart_print("\r\nERR");
 	      }
 	    }
-	    /* USER CODE END 3 */
-	  }
+  /* USER CODE END 3 */
+}
 
 /**
   * @brief System Clock Configuration

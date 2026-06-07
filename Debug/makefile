@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (13.3.rel1)
+# Toolchain: GNU Tools for STM32 (14.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -60,8 +60,8 @@ all: main-build
 main-build: ci_cd_test.elf secondary-outputs
 
 # Tool invocations
-ci_cd_test.elf ci_cd_test.map: $(OBJS) $(USER_OBJS) D:\Embedded\workspace\ci_cd_test\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ci_cd_test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Embedded\workspace\ci_cd_test\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ci_cd_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ci_cd_test.elf ci_cd_test.map: $(OBJS) $(USER_OBJS) /home/krish/workspace/ci-cd_test/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ci_cd_test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/krish/workspace/ci-cd_test/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ci_cd_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
